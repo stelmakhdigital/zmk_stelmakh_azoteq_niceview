@@ -1,0 +1,17 @@
+file_format: "1"
+id: stelmakh
+name: Stelmakh
+url: https://github.com/stelmakhdigital/zmk_stelmakh_azoteq_niceview
+type: shield
+requires: [pro_micro]
+features:
+  - keys
+  - displays
+  - rotary_encoder
+  - touchpad
+outputs:
+  - usb
+  - ble
+siblings:
+  - stelmakh_left
+  - stelmakh_right

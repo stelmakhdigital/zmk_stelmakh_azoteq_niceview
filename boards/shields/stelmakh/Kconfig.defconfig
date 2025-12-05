@@ -1,0 +1,113 @@
+if SHIELD_STELMAKH_LEFT || SHIELD_STELMAKH_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Stelmakh"
+
+config ZMK_BLE
+    default y
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 1
+
+config BT_MAX_CONN
+    default 5
+
+config BT_MAX_PAIRED
+    default 5
+
+config ZMK_STUDIO
+    default n
+
+config ZMK_STUDIO_LOCKING
+    default n  
+
+config ZMK_SLEEP
+    default y
+
+config I2C
+    default y
+
+config ZMK_RGB_UNDERGLOW
+    default y
+
+config ZMK_RGB_UNDERGLOW_EXT_POWER
+    default n
+
+config ZMK_RGB_UNDERGLOW_AUTO_OFF_IDLE
+    default y
+
+if ZMK_RGB_UNDERGLOW
+
+config WS2812_STRIP
+    default y
+
+endif ## ZMK_RGB_UNDERGLOW
+
+if LVGL
+
+config LV_Z_VDB_SIZE
+    default 64
+
+config LV_DPI_DEF
+    default 148
+
+config LV_Z_BITS_PER_PIXEL
+    default 1
+
+choice LV_COLOR_DEPTH
+    default LV_COLOR_DEPTH_1
+endchoice
+
+endif # LVGL
+
+endif ## SHIELD_STELMAKH_LEFT || SHIELD_STELMAKH_RIGHT
+
+
+
+if SHIELD_STELMAKH_RIGHT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+config ZMK_SPLIT_BLE_PERIPHERAL_STACK_SIZE
+    default 2048
+
+config INPUT
+    default y
+
+config GPIO
+    default y
+
+config PINCTRL
+    default y
+
+config I2C
+    default y
+
+endif ## SHIELD_STELMAKH_RIGHT
+
+
+if SHIELD_STELMAKH_LEFT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+    default y
+
+config ZMK_MOUSE
+    default y
+
+config ZMK_POINTING
+    default y
+
+config INPUT
+    default y
+
+endif ## SHIELD_STELMAKH_LEFT
