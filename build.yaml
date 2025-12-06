@@ -1,8 +1,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: stelmakh_left nice_view
+    shield: stelmakh_left nice_view_elemental
   - board: nice_nano_v2
-    shield: stelmakh_right nice_view
+    shield: stelmakh_right nice_view_elemental
   - board: nice_nano_v2
     shield: settings_reset
