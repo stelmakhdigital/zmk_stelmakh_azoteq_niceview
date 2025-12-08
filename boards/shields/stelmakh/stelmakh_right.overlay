@@ -47,7 +47,7 @@
         rdy-gpios = <&pro_micro 21 GPIO_ACTIVE_HIGH>;  /* Ready pin */
         rst-gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;  /* Reset pin */
 
-        suspend-timeout-ms = <120000>;  /* 120 seconds */
+        suspend-timeout-ms = <60000>;  /* 60 seconds */
         enable-power-management;
         
         /* Gesture settings */
